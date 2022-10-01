@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+html {
+  background-color: rgb(23, 5, 27);
+  height: 100%;
+  font-family: 'Nabla', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+canvas {
+  background-color: rgb(28, 5, 34);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5em;
+}
+
+button:hover, a:hover {
+  opacity: 0.5;
+  position: fixed;
+  top: 45%;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  color: rgb(23, 5, 27);
+  text-align: center;
+  font-size: 5em;
+  position: fixed;
+  top: 45%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(137, 56, 160, 0.3);
+  text-align: center;
+  padding-top: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .canvas {
+    flex-direction: column;
+  }
+  .buttons {
+    margin-bottom: 5em;
+  }
+}
