@@ -26,7 +26,7 @@ const sizes = {
 };
 
 const aspectRatio = sizes.width / sizes.height;
-const camera = new THREE.PerspectiveCamera(75,aspectRatio);
+const camera = new THREE.PerspectiveCamera(90,aspectRatio);
 camera.position.z = 100;
 scene.add(camera);
 
@@ -34,6 +34,9 @@ const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
 });
+
+// Clock
+const clock = new THREE.Clock();
 
 const tick = () => {
     meshes.forEach(mesh => mesh);
@@ -46,6 +49,7 @@ tick();
 const SPEED = 0.5;
 let coordinates = [];
 const pop = () => {
+    const elapsedTime = clock.getElapsedTime();
     meshes.forEach((mesh, i) => {
         mesh
             .position
@@ -62,6 +66,10 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);
 
 window.addEventListener('load', () => {
-    coordinates = meshes.map(() => [rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED])
+    coordinates = meshes.map(() => [
+        rand() * randNegPos() / SPEED,
+        rand() * randNegPos() / SPEED,
+        rand() * randNegPos() / SPEED
+    ])
     pop();
 });

@@ -16,10 +16,6 @@ html {
   min-height: 100vh;
 }
 
-canvas {
-  background-color: rgb(28, 5, 34);
-}
-
 h1 {
   color: rgb(23, 5, 27);
   text-align: center;
