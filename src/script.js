@@ -36,7 +36,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 const tick = () => {
-    meshes.forEach(mesh => (mesh.rotation.z += rand() / 100) * randNegPos());
+    meshes.forEach(mesh => mesh);
     renderer.render(scene, camera);
     window.requestAnimationFrame(tick);
 }
@@ -65,18 +65,3 @@ window.addEventListener('load', () => {
     coordinates = meshes.map(() => [rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED])
     pop();
 });
-
-const button = window.querySelector('button');
-button.addEventListener('click', () => {
-    coordinates = meshes.map(() => [rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED, rand() * randNegPos() / SPEED])
-    pop();
-});
-
-const h1 = window.querySelector('h1');
-h1.style.opacity = 0;
-
-
-const opacity = () => {
-    h1.opacity += 0.1
-    window.requestAnimationFrame(opacity);
-}

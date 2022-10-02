@@ -20,28 +20,6 @@ canvas {
   background-color: rgb(28, 5, 34);
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-button {
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  font-size: 1.5em;
-}
-
-button:hover, a:hover {
-  opacity: 0.5;
-  position: fixed;
-  top: 45%;
-  width: 100%;
-  margin: auto;
-}
-
 h1 {
   color: rgb(23, 5, 27);
   text-align: center;
@@ -67,13 +45,4 @@ footer {
 a {
   color: black;
   text-decoration: none;
-}
-
-@media (max-width: 1100px) {
-  .canvas {
-    flex-direction: column;
-  }
-  .buttons {
-    margin-bottom: 5em;
-  }
 }
