@@ -1,4 +1,5 @@
-# Three.js Journey
+# Three.js Big Bang
+https://threejs-big-bang.netlify.app/
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
