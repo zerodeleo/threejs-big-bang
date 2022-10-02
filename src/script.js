@@ -35,9 +35,6 @@ const renderer = new THREE.WebGLRenderer({
     alpha: true,
 });
 
-// Clock
-const clock = new THREE.Clock();
-
 const tick = () => {
     meshes.forEach(mesh => mesh);
     renderer.render(scene, camera);
@@ -49,7 +46,6 @@ tick();
 const SPEED = 0.5;
 let coordinates = [];
 const pop = () => {
-    const elapsedTime = clock.getElapsedTime();
     meshes.forEach((mesh, i) => {
         mesh
             .position
